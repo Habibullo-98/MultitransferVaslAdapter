@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: postgres:17
+ 
+  ps-multitransfer-in-service:
+    image: ${DOCKER_REGISTRY-}psmultitransferinservice
+    build:
+      context: .
+      dockerfile: src/MultitransferVaslAdapter/Dockerfile
